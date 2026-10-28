@@ -1,0 +1,48 @@
+import sys
+import time
+
+def jalanin_lirik():
+    lirik = [
+        ("\nJadilah ", 0.2, 1.4),
+        ("Pelita dikala redup hatimu ", 0.16, 1.6),
+        ("Disaat tak mampu lagi diriku ", 0.16, 1.6),
+        ("Terangi gelapmu seperti dulu ", 0.16, 5),
+        ("Teruslah ", 0.16, 1.6),
+        ("Melangkah walau kini ku tak ", 0.12, 0.1),
+        ("Berjalan ", 0.2, 0.8),
+        ("Di sampingmu ", 0.16, 0.8),
+        ("Hingga kau pun berlabuh ", 0.12, 0.4),
+        ("Di akhir ujung jalanmu ", 0.12, 2),
+        ("Sampai nanti ", 0.18, 1.6),
+        ("Kelak esok kan kembali ", 0.22, 1.4),
+        ("Ini tentang kita ", 0.24, 1.6), 
+        ("Tentang bagaimana cara ", 0.16, 0.2),
+        ("Kita mampu melangkah ", 0.12, 0.5),
+        ("Tanpa alasan yang sama ", 0.1, 0.3),
+        ("Dan sadari (dan sadari) ", 0.12, 1), 
+        ("Kini nafasmu pun tak seirama denyut nadiku ", 0.24, 1.6),
+        ("Amat dalam ku terjatuh ", 0.12, 0.6),
+        ("Hingga kau pun berlabuh ", 0.12, 0.4),
+        ("Di akhir ujung jalanmu... ", 0.17, 0.6),
+        
+            
+    ]
+
+    print("\n== Sampai Nanti - Threesixty Skatepunk ==")
+    time.sleep(0.1)
+
+    for baris_lagu, delay_karakter, delay_setelah in lirik:
+
+        # Efek mengetik per karakter
+        for karakter in baris_lagu:
+            print(karakter, end="")
+            sys.stdout.flush()
+            time.sleep(delay_karakter)
+
+        # Jeda mengikuti perpindahan nada/lirik
+        time.sleep(delay_setelah)
+        print("")
+
+    print("// Code by Fanncode")
+
+jalanin_lirik()
